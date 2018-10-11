@@ -1,0 +1,34 @@
+<div class="row">
+  <div id="logo">{{title}}</div>
+  <div class="col">
+    <form id="place" class="form-inline">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" style="width:150px">Latitude</span>
+        </div>
+        <input type="text" id="latitude" name="latitude" class="form-control" [(ngModel)]="lat" placeholder="##.##" style="width:250px"/>
+      </div>
+      <br/>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" style="width:150px">Longitude</span>
+        </div>
+        <input type="text" id="longitude" name="longitude" class="form-control" [(ngModel)]="lon" placeholder="##.##" style="width:250px"/>
+      </div>
+      <div class="input-group mb-3">
+        <button class="btn btn-default" id="getsun" (click)="getSun()">Vis solopgang og solnedgang</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="flex-row">
+  <div class="col-2" *ngIf="sundata!=null">
+    <img src="https://sunrise-sunset.org/sunrise-100px.svg" style="width:300px">
+    <span class="label text-center">{{sundata.sunrise}}</span>
+  </div>
+  <div class="col-2" *ngIf="sundata!=null">
+      <img src="https://sunrise-sunset.org/sunset-100px.svg" style="width:300px">
+    <span class="label text-center">{{sundata.sunset}}</span>
+  </div>
+</div>
+

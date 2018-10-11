@@ -1,0 +1,12 @@
+#logo{
+  height: 55px;
+  font-size: 24px;
+  font-family: 'Happy Monkey', cursive;
+  text-decoration: none;
+  display: block;
+  background: url(https://sunrise-sunset.org/logo-v1_62x47.svg) 0 10px no-repeat;
+  background-size: 40px 30px;
+  padding-left: 50px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
