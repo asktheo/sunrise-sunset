@@ -1,0 +1,117 @@
+/* Bootstrap custom variables */
+$font-family-sans-serif: Avenir W01, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-size-base: 0.95rem;
+$primary: #00378b;
+$input-focus-border-color: $primary;
+$enable-rounded: false;
+$border-width: 2px;
+$input-btn-padding-y: .2rem;
+$input-btn-padding-x-lg: 2rem;
+$btn-padding-x: 2rem;
+$custom-select-padding-y: 0;
+$modal-lg: 1100px;
+$modal-md: 537px;
+
+/* Bootstrap imports */
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "print";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "utilities";
+
+/* Bootstrap modifications */
+.btn {
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  @include button-size($input-btn-padding-y, $btn-padding-x, $font-size-base * 0.9, $input-btn-line-height, $btn-border-radius);
+}
+
+.btn-link {
+  cursor: pointer;
+}
+
+.btn-icon {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.navbar {
+  padding: 0.25rem 1rem;
+}
+
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+
+  @include media-breakpoint-only(lg) {
+    column-count: 2;
+  }
+
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+}
+
+.custom-checkbox label {
+  cursor: pointer;
+}
+
+button.dropdown-item:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  /* Fix some weird behaviour by ngb drop down menu where you could see through the border of the drop down */
+  background-clip: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Avenir W01";
+  src: url("https://fast.fonts.net/dv2/14/b290e775-e0f9-4980-914b-a4c32a5e3e36.woff2?d44f19a684109620e4841579ae90e818937f0df4d514ffe0d3e3e57723a4125208f710b15d5bd87a20be5922b56a3a06b0f26ae7d930583a24007f936f67b632f94b77fd810c4bcac2ec3850ef1029ea2d1dd8edd51b1b06bbd0414a82436bb4c7e4c94241ed874f73b4d53e24&projectId=8cae7376-b683-4a7e-bab3-22f55d013290") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir W01";
+  src: url("https://fast.fonts.net/dv2/14/c78eb7af-a1c8-4892-974b-52379646fef4.woff2?d44f19a684109620e4841579ae90e818937f0df4d514ffe0d3e3e57723a4125208f710b15d5bd87a20be5922b56a3a06b0f26ae7d930583a24007f936f67b632f94b77fd810c4bcac2ec3850ef1029ea2d1dd8edd51b1b06bbd0414a82436bb4c7e4c94241ed874f73b4d53e24&projectId=8cae7376-b683-4a7e-bab3-22f55d013290") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+}
